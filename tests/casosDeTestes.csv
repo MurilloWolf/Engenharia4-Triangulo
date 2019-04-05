@@ -1,0 +1,14 @@
+0,0,0,erro
+0,0,1,erro
+0,1,0,erro
+0,1,1,erro
+1,0,0,erro
+1,0,1,erro
+1,1,0,erro
+1,1,1,equilatero
+1,2,3,escaleno
+3,1,2,escaleno
+2,3,1,escaleno
+1,2,1,isoceles
+1,1,2,isoceles
+2,1,1,isoceles

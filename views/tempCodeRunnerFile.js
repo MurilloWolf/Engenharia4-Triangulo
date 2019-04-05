@@ -1,0 +1,1 @@
+const triangulo_controll
