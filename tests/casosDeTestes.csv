@@ -1,10 +1,10 @@
-0,0,0,erro
-0,0,1,erro
-0,1,0,erro
-0,1,1,erro
-1,0,0,erro
-1,0,1,erro
-1,1,0,erro
+0,0,0,False
+0,0,1,False
+0,1,0,False
+0,1,1,False
+1,0,0,False
+1,0,1,False
+1,1,0,False
 1,1,1,equilatero
 1,2,3,escaleno
 3,1,2,escaleno

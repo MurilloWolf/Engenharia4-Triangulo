@@ -10,51 +10,44 @@ class ArquivoCSV {
     }
 
 
-
     get  arrayCsv(){
-        return  new Promise ((resolve, reject) => {
+        return new Promise ((resolve, reject) => {
            
-            var docT = new Array()
+            
             fs.readFile(this._caminhoDoArquivo, 'utf-8', function (err, data){
                     
-                
-              
-                if(err) {
-                console.error("Could not open file: %s", err);
-                return null
-                }
-                else{
-                    
-                
-                    var fileArr = data.split('\n')
-                    var cont = 0
-                    for (var i=0; i<fileArr.length; i++) {         
+                if(err)
+                    reject('erro ao abrir arquivo')
 
-                        var fileLine = fileArr[i].split(',')
+                resolve(data)
                 
-                        for (var j=0; j<fileLine.length; j++) {
-                            //se tiver uma linha valida
-                            if(fileLine[j].trim()!='')
-                            //adiciona no array
-                            docT[cont++] = fileLine[j];            
-                            
-                        }
-                                
-                    }
-                    
-                
-                    
-                }
-               
-                return docT
-            });    
             
-            console.log(documento)
-    });
-            //  if(this._caminhoDoArquivo == null || this._caminhoDoArquivo == undefined)
-            //   this._caminhoDoArquivo = 'tests/casosDeTestes.csv'
+            });       
+        });
+    }
 
-}
+    retornaVetorDeDados( data ){
+       
+        console.log(data)
+        let docT = new Array()
+        var fileArr = data.split('\n')
+        var cont = 0
+
+        for (var i=0; i<fileArr.length; i++) {         
+
+            var fileLine = fileArr[i].split(',')
+
+            for (var j=0; j<fileLine.length; j++) {
+                //se tiver uma linha valida
+                if(fileLine[j].trim()!='')
+                //adiciona no array
+                docT[cont++] = fileLine[j];            
+                
+            }
+                    
+        }
+        return docT
+    }
 }
 
     

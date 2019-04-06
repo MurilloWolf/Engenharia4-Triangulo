@@ -1,7 +1,9 @@
 const assert = require('assert')
-const Triangulo = require('../models/Triangulo')
-const triangulo_controller = require('../controllers/ctrTestes')
-const docT = require('../public/lerArquivoTexto')
+
+
+//const Triangulo = require('../models/Triangulo')
+//const triangulo_controller = require('../controllers/ctrTestes')
+//const docT = require('../public/lerArquivoTexto')
 // npm install--sav-dev mocha
 //
 //comando para ignorar a pasta do node_modules
@@ -21,7 +23,18 @@ const docT = require('../public/lerArquivoTexto')
 //Ele ira buscar na pasta um arquivo com o extensão .spec.js para executar
 
 
+describe ('Teste 1', ()=>{
+    it('Primeiro Teste', ()=>{
+        
+          const a = 1
+          const b = 2
+          const c = a+b
+          assert.equal(c,3)
+    })  
+      
+  })
 
+/*
 describe ('Triangulo.js', () =>{
 
     var contadorDeTeste = 0
@@ -64,3 +77,5 @@ describe ('Triangulo.js', () =>{
 
 
 }) 
+
+*/
